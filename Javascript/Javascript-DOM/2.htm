@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome to HTML with Javascript Programing..</h2>
+    <h2>Javascript with DOM</h2>
+    <script>
+        //document.write("Hello World..");
+        var header=document.getElementsByTagName('h2')
+        let txt=header[0].innerText;
+        alert(txt)
+        txt=header[1].innerText;
+        alert(txt);
+        for(let i=0;i<header.length;i++)
+        {
+            header[i].style.color='Green';
+            let msg=header[i].innerHTML;
+            alert(msg);
+        }
+    </script>
+</body>
+</html>

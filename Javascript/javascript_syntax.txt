@@ -1,0 +1,80 @@
+variable declaration
+========================
+var var_name=value;
+let var_name=value
+Conditional Statements
+=======================
+//simple if
+if(condition)
+{
+//statements
+}
+//if-else
+if(condition)
+{
+//statements
+}
+else
+{
+//statements
+}
+//if else if
+if(condition)
+{
+//statements
+}
+else if(condition)
+{
+//statements
+}
+else
+{
+//statements
+}
+//switch
+swich(expression_value)
+{
+case value1:
+//statements
+break;
+case value1:
+//statements
+break;
+case value1:
+//statements
+break;
+default:
+//statements
+break;
+}
+
+Loops
+=====
+//while
+while(condition)
+{
+//statements
+}
+//do-while
+do
+{
+//statements
+}while(condition)
+//for
+for(init;condition;incre)
+{
+//statements
+}
+
+funtion defination
+====================
+function function_name(args)
+{
+//javascript statements
+}
+//invoking
+
+function_name()
+
+//Arrow function
+const func=(args)=>expression

@@ -1,0 +1,13 @@
+Topics discussed today
+========================
+1. Angular Overview
+2. Angular CLI Commands
+3. Angular CLI installation in local machine
+4. How to Create Anugla APP using ng new
+5. How to Run Angular app using ng server
+6.Angular Project Structure
+7.Add compomnets to Angular app
+8.How to run specific component in Angular App and how to nested one component with app component
+9.What is databining
+10. How to use one-way-binding
+11.How to install bootstap and configure.

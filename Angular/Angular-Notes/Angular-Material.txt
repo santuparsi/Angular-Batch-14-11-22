@@ -1,0 +1,19 @@
+Angular Material
+=================
+1.Angular Material is a UI Library
+2.Developed by Google in 2014.
+3.It is for Only Angular developers
+4.Angular Material helps to create attractive,consistent and responsive web components
+5.It has build it responsive design
+6.It has standard css
+7.It has cross browser support
+
+Angular Material Installations
+=============================
+Node.js
+npm
+Angular CLI
+VSCode
+Install Angular Material,Angular CDK(Component Dev Kit) and Angular Animations
+==========================================================
+ng add @angular/material

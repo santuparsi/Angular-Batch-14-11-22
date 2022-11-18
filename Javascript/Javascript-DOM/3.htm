@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id='p1'>Working with HTML DOM</p>
+    <h1 id='h11'>Javascript is Object based</h1>
+    <script>
+        document.body.style.backgroundColor='green';
+        let txt=document.getElementById('p1').innerText;
+        alert(txt)
+        document.getElementById('h11').style.color='red'; //apply text color using javascript
+        txt=document.getElementById('h11'); //return h1 object
+        alert(txt.innerText);
+    </script>
+</body>
+</html>

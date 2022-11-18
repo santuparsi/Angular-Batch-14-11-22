@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>HTML is a UI based Lang to desing the web page</p>
+    <p>Javascript is Client-Side Scripting</p>
+    <script>
+        var para=document.getElementsByTagName('p');
+        let txt='';
+        for(let i=0;i<para.length;i++)
+        {
+            txt += para[i].innerText+'<br>';
+        }
+        document.write(txt)
+    </script>
+</body>
+</html>
