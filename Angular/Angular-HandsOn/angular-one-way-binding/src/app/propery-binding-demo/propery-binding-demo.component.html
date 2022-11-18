@@ -1,0 +1,11 @@
+
+<div class="container">
+  <h1>{{title}}</h1>
+  <h1 [innerText]="title"></h1>
+  <a [href]="page_url">Click</a>
+  <button on-click="UrlChange()">Change</button><br>
+  <img [src]="img_path" [width]="img_width" [height]="img_height"><br>
+  <button on-click="ChangeImage()" class="btn btn-primary">ChageImage</button>
+
+</div>
+

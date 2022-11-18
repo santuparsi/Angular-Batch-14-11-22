@@ -1,0 +1,36 @@
+
+<div class="container">
+  <pre *ngFor="let student of students">
+    ID:{{student.studentId}}
+    Name:{{student.studentName}}
+    Age:{{student.studentAge}}
+    Std:{{student.studentStd}}
+    <hr>
+  </pre>
+  <hr>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Std</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of students">
+        <td>{{item.studentId}}</td>
+        <td>{{item.studentName}}</td>
+        <td>{{item.studentAge}}</td>
+        <td>{{item.studentStd}}</td>
+        <td><a href="/Details?{{item.studentId}}">Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr>
+
+
+
+

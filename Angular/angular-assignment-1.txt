@@ -1,0 +1,5 @@
+1. Create new angular app
+2. Crate a model Movie(movidId,movieName,lang,year,actor,director)
+3. Create a Movie-list component and iniate movie array
+4. Bind Movie array details on the view template in table format.
+5. Add required bootstrap.

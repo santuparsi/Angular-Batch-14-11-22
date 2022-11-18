@@ -11,4 +11,9 @@ export class CustomerComponent {
   age:number=21;
   dob:Date=new Date(2000,1,21);
   address:string="Bangalore"
+  EditCustomer()
+  {
+    this.age=25;
+    this.address='Chennai';
+  }
 }
