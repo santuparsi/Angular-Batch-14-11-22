@@ -1,0 +1,21 @@
+<div [ngStyle]="{'background-color':'red'}">
+    This is Ngstyle Demo
+</div>
+<!-- conditional styling -->
+<div [ngStyle]="{'color':flag==1?'red':'green'}">
+    This is Ngstyle Demo
+</div>
+<button on-click='Set()'>Set</button>
+<div class="row">
+    <div>Select Color</div>
+    <div>
+        <select [(ngModel)]="scolor">
+            <option>Red</option>
+            <option>Green</option>
+            <option>Yellow</option>
+        </select>
+        <p [ngStyle]="{'color': scolor}">
+            ngStyle supports dynamic styling
+        </p>
+    </div>
+</div>

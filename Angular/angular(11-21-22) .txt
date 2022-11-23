@@ -1,0 +1,4 @@
+Angular-Day3
+===========
+1. Angular two-way binding
+2. Angular Directivies

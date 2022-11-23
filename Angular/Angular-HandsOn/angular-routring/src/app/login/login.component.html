@@ -1,0 +1,26 @@
+
+<div class="container">
+
+  <table class="table table-striped table-hover">
+    <tr>
+      <td>UserName</td>
+      <td><input type="text" name="" id="" [(ngModel)]="user.userName"></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input type="password" name="" id="" [(ngModel)]="user.password"></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button on-click="Validate()">Login</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <span class="text-primary">{{errMsg}}</span>
+      </td>
+    </tr>
+  </table>
+
+</div>
+

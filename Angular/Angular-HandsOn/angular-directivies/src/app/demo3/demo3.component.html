@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div>Select Country</div>
+        <div>
+            <select [(ngModel)]="country">
+                <option *ngFor="let item of countries">{{item}}</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div [ngSwitch]="country">
+<p *ngSwitchCase="'India'">
+Cities:<br>
+<select>
+    <option *ngFor="let city of india_cities ">{{city}}</option>
+</select>
+</p>
+<p *ngSwitchCase="'US'">
+    Cities:<br>
+    <span>NewYork</span><br> <span>Chicago</span>
+</p>
+<p *ngSwitchCase="'UK'">
+    Cities:<br>
+    <span>London</span> <br><span>Lords</span>
+</p>
+<p *ngSwitchDefault>
+    <span>No cities found</span>
+</p>
+</div>

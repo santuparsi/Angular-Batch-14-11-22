@@ -1,0 +1,8 @@
+<p [ngClass]="{'one': true}">This is NgClass Demo</p>
+<p [ngClass]="{'one': flag,'two':!flag}">
+    My color is changing by button click
+</p>
+<p [ngClass]="{'one': temp==1,'two':temp==2}">
+    My color is changing by button click
+</p>
+<button on-click='Setflag()'>set</button>

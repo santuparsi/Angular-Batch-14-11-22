@@ -1,0 +1,5 @@
+1. Angular One-way binding
+2. Angular Properry binding
+3. Angular event-handling
+4. Angular two-way binding
+5. Angular Directivies
