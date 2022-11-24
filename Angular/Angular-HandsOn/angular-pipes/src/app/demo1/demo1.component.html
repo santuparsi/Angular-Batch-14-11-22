@@ -1,0 +1,21 @@
+
+<div class="container">
+  <pre>
+    Name:{{employeeName}}
+    JoinDate:{{joinDate}}
+    Salary:{{salary}}
+  </pre>
+  <hr>
+  <pre>
+    Name:{{employeeName|uppercase}}
+    JoinDate:{{joinDate|date}}
+    Salary:{{salary|currency}}
+  </pre>
+  <hr>
+  <pre>
+    Name:{{employeeName|lowercase}}
+    JoinDate:{{joinDate|date:'MM/dd/yy'}}
+    Salary:{{salary|currency:'INR'}}
+  </pre>
+</div>
+

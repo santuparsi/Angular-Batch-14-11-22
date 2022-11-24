@@ -7,8 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent {
+ uname:any='';
   constructor(private router:Router) {
-
+    //read value from the local storage
+    this.uname=localStorage.getItem('un');
   }
   LogOut()
   {

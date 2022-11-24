@@ -28,14 +28,17 @@ export class LoginComponent {
     console.log(obj);
     if(obj!=null)
     {
+     let uname:any=obj.userName;
       sessionStorage.setItem('user','validated')
       if(obj.role=='Admin')
       {
         //redirect to admin-dashboard
-        this.router.navigateByUrl('admin-dashboard')
+        this.router.navigateByUrl('admin-dashboard/'+uname)
       }
       else if(obj.role=='User')
       {
+        //set username in local storage
+        localStorage.setItem('un',uname);
         //redirect to user-dashboard
         this.router.navigateByUrl('user-dashboard')
       }

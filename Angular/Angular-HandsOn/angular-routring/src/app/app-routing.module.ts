@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'login',component:LoginComponent},
-  {path:'admin-dashboard',component:AdminDashboardComponent},
+  {path:'admin-dashboard/:un',component:AdminDashboardComponent},
   {path:'user-dashboard',component:UserDashboardComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
