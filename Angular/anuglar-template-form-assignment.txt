@@ -1,0 +1,2 @@
+1. Create an angular app
+2. Create a Student Registration form using Template driven form with validations

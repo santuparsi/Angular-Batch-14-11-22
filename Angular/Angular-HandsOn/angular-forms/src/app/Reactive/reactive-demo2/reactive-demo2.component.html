@@ -1,9 +1,9 @@
 <div class="register-form container">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="form-group">
-           
+
                 <label>Full Name</label>
-            <input type="text" formControlName="fullname" class="form-control"
+            <input type="text"  class="form-control"
                 [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }" />
             <div *ngIf="submitted && f['fullname'].errors" class="invalid-feedback">
                 <div *ngIf="f['fullname'].errors['required']">Fullname is required</div>

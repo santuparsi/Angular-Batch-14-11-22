@@ -1,0 +1,2 @@
+1. Create an angular app
+2. Create a Employee Registration form using Reactive form template with validations
