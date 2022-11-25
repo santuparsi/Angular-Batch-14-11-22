@@ -1,0 +1,15 @@
+<br>
+<div class="container" style="max-width: 500px;">
+    <div class="form-group">
+      
+        <input id="my-input" class="form-control" type="text"  [(ngModel)]="query">
+    </div>
+    <div class="card" *ngFor="let data of students|searchFilter:query">
+        <div class="card-body">
+            <h5 class="card-title">{{data.name}}</h5>
+            <h6 class="card-subtile text-muted">{{data.name}}</h6>
+            <p class="card-text">{{data.email}}</p>
+        </div>
+    </div>
+</div>
+{{query}}

@@ -1,0 +1,26 @@
+
+<div class="container">
+    <h1>{{title}}</h1>
+    <pre>
+        title:{{ title | uppercase }}
+        title:{{ title | lowercase }}
+        price:{{ price | currency:'INR' }}
+        price:{{ price | currency:'USD' }}
+        price:{{ price | currency:'EUR' }}
+        bookingDate:{{ bookingDate | date }}
+        bookingDate:{{ bookingDate | date:'fullDate' }}
+        bookingDate:{{ bookingDate | date:'shortDate' }}
+        bookingDate:{{ bookingDate | date:"MM/dd/yy" }}
+        {{ obj | json }}
+    </pre>
+</div>
+
+<div class="container">
+    {{'Rohan'|title:'Male'}}<br>
+    {{'Tina'|title:'FeMale'}}
+</div>
+<div>
+    {{'Sasanka'|test}}
+</div>
+
+
