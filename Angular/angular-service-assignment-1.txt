@@ -1,0 +1,9 @@
+1. Crate an Angular app
+2. Create a Model Book(bookId,bookName,price,author,publisher)
+3.Crate a Book service, add the following service methods
+	a. AddBook()
+	b. GetBookByName()
+	c. GetBooksByAuthor()
+	d. GetBooksByPublisher()
+	e. GetAllBooks();
+4. Crate a Book-app Components and invoke/test the Book service methods.

@@ -1,0 +1,8 @@
+<p>parent1 works!</p>
+<div class="row">
+    <div>Enter name</div>
+    <input type="text" [(ngModel)]="un">
+    <button on-click='setName()'>Click</button>
+    
+</div><br>
+<app-child1 [childmessage]='paranetmsg' [uname]='parenetname'></app-child1>
