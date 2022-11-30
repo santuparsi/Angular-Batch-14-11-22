@@ -1,0 +1,43 @@
+<div class="container">
+
+  <table class="table">
+    <tr>
+      <td>Id</td>
+      <td>
+        <input type="number" [(ngModel)]="id" class="form-control">
+      </td>
+    </tr>
+    <tr>
+      <td>Title</td>
+      <td>
+        <input type="text" [(ngModel)]="title" class="form-control">
+      </td>
+    </tr>
+
+  </table>
+  <button type="button" class="btn btn-success" (click)="createProduct()">Create</button> &nbsp;
+  <button type="button" class="btn btn-success" (click)="editProduct()">Edit</button>
+</div>
+
+<hr>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td>{{p.id}}</td>
+        <td>{{p.title}}</td>
+        <td>
+          <button type="button" class="btn btn-link" (click)="deleteProduct(p.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-success" (click)="createProduct()">Create</button>
+</div>

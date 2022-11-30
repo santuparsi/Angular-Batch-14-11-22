@@ -6,13 +6,11 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CrudComponent } from './crud/crud.component';
 import { CrudHttpService } from './crud-http.service';
-import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CrudComponent,
-    DemoComponent
+    CrudComponent
   ],
   imports: [
     BrowserModule,
