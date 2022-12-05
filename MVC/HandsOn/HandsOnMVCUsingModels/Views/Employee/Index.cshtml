@@ -1,0 +1,30 @@
+﻿@model List<Employee>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a asp-action="Create">Create New</a>
+<div class="container">
+    <table class="table table-stripped">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>JoinDate</th>
+            <th>Salary</th>
+            <th></th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeId</td>
+                <td>@item.Name</td>
+                <td>@item.JoinDate.ToShortDateString()</td>
+                <td>@item.Salary</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.EmployeeId">Details</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

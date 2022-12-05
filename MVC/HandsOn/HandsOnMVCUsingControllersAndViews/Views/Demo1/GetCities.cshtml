@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "GetCities";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th>Cities</th>
+        </tr>
+        @foreach(var item in ViewBag.Cities)
+        {
+            <tr>
+                <td>@item</td>
+            </tr>
+        }
+    </table>
+</div>
+

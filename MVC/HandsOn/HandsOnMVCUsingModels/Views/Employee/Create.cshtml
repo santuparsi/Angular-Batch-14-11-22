@@ -1,0 +1,42 @@
+﻿@model Employee;
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+   <form asp-action="Save" method="post">
+        <table class="table">
+            <tr>
+                <td>Id</td>
+                <td>
+                    <input type="number" name="EmployeeId" />
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>JoinDate</td>
+                <td>
+                    <input type="date" name="JoinDate" />
+                </td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>
+                    <input type="number" name="Salary" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                   <input type="submit" class="btn btn-primary" value="Submit" />
+                </td>
+            </tr>
+        </table>
+   </form>
+</div>
+

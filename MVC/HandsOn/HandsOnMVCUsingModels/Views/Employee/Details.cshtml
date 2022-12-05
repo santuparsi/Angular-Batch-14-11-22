@@ -1,0 +1,17 @@
+﻿@model Employee;
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1>Employee Details</h1>
+    <pre>
+        Employee Id:@Model.EmployeeId
+        Employee Name:@Model.Name
+        JoinDate:@Model.JoinDate.ToLongDateString()
+        Salary:@Model.Salary
+    </pre>
+</div>
+<a asp-action="Index">Back</a>
+

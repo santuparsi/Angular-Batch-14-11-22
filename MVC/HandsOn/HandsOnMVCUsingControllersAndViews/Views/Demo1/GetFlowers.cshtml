@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "GetFlowers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1>FlowersList</h1>
+@{
+    foreach(var item in ViewData["flower"] as string[])
+    {
+        <span>@item</span>
+    }
+}
+
+</div>
+<hr />
+<div class="container">
+   <ul>
+        @foreach(var item in ViewData["flower"] as string[])
+        {
+        <li>@item</li>
+        }
+   </ul>
+</div>
