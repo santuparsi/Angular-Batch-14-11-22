@@ -1,0 +1,60 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+<div class="container">
+    @using (Html.BeginForm("Register", "Employee"))
+    {
+        <table class="table table-striped">
+            <tr>
+                <td>Employee Id</td>
+                <td>@Html.TextBoxFor(m=>m.EmployeeId,null,new {@class="form-control"})</td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td>@Html.TextBoxFor(m=>m.EmployeeName,null,new {@class="form-control"})</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    Male @Html.RadioButtonFor(m=>m.Gender,"G1")
+                    FeMale @Html.RadioButtonFor(m=>m.Gender,"G1")
+                </td>
+            </tr>
+            <tr>
+                <td>JoinDate</td>
+                <td>@Html.TextBoxFor(m=>m.JoinDate,null,new {@class="form-control",@type="date"})</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>@Html.TextBoxFor(m=>m.Email,null,new {@class="form-control",@type="email"})</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>@Html.TextBoxFor(m=>m.Mobile,null,new {@class="form-control",@type="number"})</td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>@Html.TextBoxFor(m=>m.Salary,null,new {@class="form-control",@type="number"})</td>
+            </tr>
+            <tr>
+                <td>Project</td>
+                <td>@Html.DropDownListFor(m=>m.Project,new SelectList(new string[]{"HealthCare","ABCInsurence","SMS"}),new {@class="form-control",@type="number"})</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    @Html.CheckBox("confirm",false) Accept all terms and condtions
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+

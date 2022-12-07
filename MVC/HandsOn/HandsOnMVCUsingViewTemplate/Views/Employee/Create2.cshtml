@@ -1,0 +1,79 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+<div class="container">
+    @using (Html.BeginForm("Register", "Employee"))
+    {
+        <table class="table table-striped">
+            <tr>
+                <td>Employee Id</td>
+                <td>
+                    <input type="text" asp-for="EmployeeId" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td>
+                    <input type="text" asp-for="EmployeeName" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    Male
+
+                    <input type="radio" asp-for="Gender" class="form-control">
+
+                    FeMale
+
+                    <input type="radio" asp-for="Gender" class="form-control">
+                </td>
+
+            </tr>
+            <tr>
+                <td>JoinDate</td>
+                <td>
+                    <input type="date" asp-for="JoinDate" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>@Html.TextBox("Email",null,new {@class="form-control",@type="email"})</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>
+                    <input type="email" asp-for="Email" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>
+                    <input type="number" asp-for="Salary" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>Project</td>
+                <td>@Html.DropDownList("Project",new SelectList(new string[]{"HealthCare","ABCInsurence","SMS"}),new {@class="form-control",@type="number"})</td>
+                <td>
+                    <select asp-for="Project" asp-items='new SelectList(new string[]{" HealthCare","ABCInsurence","SMS"})'></select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    @Html.CheckBox("confirm",false) Accept all terms and condtions
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+

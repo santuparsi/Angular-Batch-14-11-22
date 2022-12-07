@@ -1,0 +1,59 @@
+
+<div class="container">
+<table  class="table table-bordered table-hover">
+  <tr>
+    <td>ID</td>
+    <td>
+    <input type="number" class="form-control" [(ngModel)]="pid" required="required" pattern="" title="">
+    </td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>
+    <input type="text" class="form-control" [(ngModel)]="pname" required="required" pattern="" title="">
+    </td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>
+    <input type="number" class="form-control" [(ngModel)]="price" required="required" pattern="" title="">
+    </td>
+  </tr>
+  <tr>
+    <td>Stock</td>
+    <td>
+    <input type="number" class="form-control" [(ngModel)]="stock" required="required" pattern="" title="">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button class="btn-primary" (click)="Search()">Search</button>
+      <button class="btn-primary" (click)="Add()">Add</button>
+      <button class="btn-primary" (click)="Update()">Update</button>
+      <button class="btn-primary" (click)="Delete()">Delete</button>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="text-info">
+      {{errmsg}}
+    </td>
+  </tr>
+</table>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Price</th><th>Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of list">
+        <td>{{item.pid}}</td>
+        <td>{{item.pname}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.stock}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+

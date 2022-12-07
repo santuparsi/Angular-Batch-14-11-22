@@ -1,0 +1,29 @@
+﻿@model List<HandsOnMVCUsingModels.ViewModel.ViewModel2>
+@{
+    ViewData["Title"] = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>GetAll</h1>
+<div class="container">
+    <table class="table table-stripped">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>ProjectCode</th>
+            <th>ProjectName</th>
+            
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeId</td>
+                <td>@item.Name</td>
+                <td>@item.ProjectCode</td>
+                <td>@item.ProjectName</td>
+              
+            </tr>
+        }
+    </table>
+</div>
+

@@ -1,0 +1,59 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+<div class="container">
+    @using(Html.BeginForm("Register","Employee"))
+    {
+        <table class="table table-striped">
+            <tr>
+                <td>Employee Id</td>
+                <td>@Html.TextBox("EmployeeId",null,new {@class="form-control"})</td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td>@Html.TextBox("EmployeeName",null,new {@class="form-control"})</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>Male @Html.RadioButton("Gender","G1")
+                    FeMale @Html.RadioButton("Gender","G1")
+                </td>
+            </tr>
+            <tr>
+                <td>JoinDate</td>
+                <td>@Html.TextBox("JoinDate",null,new {@class="form-control",@type="date"})</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>@Html.TextBox("Email",null,new {@class="form-control",@type="email"})</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>@Html.TextBox("Mobile",null,new {@class="form-control",@type="number"})</td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>@Html.TextBox("Salary",null,new {@class="form-control",@type="number"})</td>
+            </tr>
+            <tr>
+                <td>Project</td>
+                <td>@Html.DropDownList("Project",new SelectList(new string[]{"HealthCare","ABCInsurence","SMS"}),new {@class="form-control",@type="number"})</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    @Html.CheckBox("confirm",false) Accept all terms and condtions
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+

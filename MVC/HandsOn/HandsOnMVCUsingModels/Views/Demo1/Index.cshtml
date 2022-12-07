@@ -1,0 +1,51 @@
+﻿@model HandsOnMVCUsingModels.ViewModel.ViewModel1
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Employee Details</h1>
+<div class="container">
+    <table class="table table-stripped">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>JoinDate</th>
+            <th>Salary</th>
+         
+        </tr>
+        @foreach(var item in Model.Employees)
+        {
+            <tr>
+                <td>@item.EmployeeId</td>
+                <td>@item.Name</td>
+                <td>@item.JoinDate.ToShortDateString()</td>
+                <td>@item.Salary</td>
+                
+            </tr>
+        }
+    </table>
+</div>
+<hr />
+<h1>Project Details</h1>
+<div class="container">
+    <table class="table table-stripped">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>TeamSize</th>
+            <th>StartDate</th>
+           
+        </tr>
+        @foreach (var item in Model.Projects)
+        {
+            <tr>
+                <td>@item.ProjectCode</td>
+                <td>@item.ProjectName</td>
+                <td>@item.TeamSize</td>
+                <td>@item.StartDate.ToShortDateString()</td>
+                
+            </tr>
+        }
+    </table>
+</div>

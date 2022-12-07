@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Login</h1>
+<div class="container">
+    @using (Html.BeginForm("Validate", "Employee"))
+    {
+        <table class="table table-striped">
+            <tr>
+                <td>Username</td>
+                <td>@Html.TextBox("uname",null,new {@class="form-control"})</td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>@Html.Password("pwd",null,new {@class="form-control"})</td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="SingIn">
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+
