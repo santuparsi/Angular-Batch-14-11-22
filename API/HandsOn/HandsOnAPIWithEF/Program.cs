@@ -1,15 +1,19 @@
-using HandsOnAPIUsingModel.Repositories;
+using HandsOnAPIWithEF.Contracts;
+using HandsOnAPIWithEF.Entities;
+using HandsOnAPIWithEF.Services;
+using Microsoft.EntityFrameworkCore;
 
-namespace HandsOnAPIUsingModel
+namespace HandsOnAPIWithEF
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            var connection = builder.Configuration.GetConnectionString("TestDBConnection");
             // Add services to the container.
-            builder.Services.AddSingleton<ProductRepository>();
+            builder.Services.AddDbContext<ProductContext>(options => options.UseSqlServer(connection));
+            builder.Services.AddTransient<IProductContract, ProductRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -23,8 +27,6 @@ namespace HandsOnAPIUsingModel
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
-            app.UseHttpsRedirection();
 
             app.UseAuthorization();
 

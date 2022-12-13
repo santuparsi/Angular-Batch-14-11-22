@@ -1,4 +1,5 @@
 ﻿using HandsOnAPIUsingModel.Models;
+using HandsOnAPIUsingModel.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,21 +9,29 @@ namespace HandsOnAPIUsingModel.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        public List<Product> products = new List<Product>()
+        private readonly ProductRepository productRepository;
+
+        public ProductController(ProductRepository productRepository)
         {
-            new Product(){ProductId=34203,ProductName="Bottle",Price=40,Stock=100},
-             new Product(){ProductId=45353,ProductName="Choclate",Price=50,Stock=100},
-        };
+            this.productRepository = productRepository;
+        }
+
         //EndPoints(Action Methods)
-        [HttpGet]
+        [HttpGet,Route("GetAllProducts")]
         public List<Product> GetProducts()
         {
-            return products;
+            return productRepository.GetProducts();
         }
         [HttpGet,Route("GetProduct/{id}")]
         public Product? GetProduct(int id)
         {
-            return products.SingleOrDefault(p => p.ProductId == id);
+            return productRepository.GetProduct(id);
+        }
+        [HttpPost,Route("AddProduct")]
+        public string Add(Product item)
+        {
+          productRepository.AddProduct(item);
+            return "Product Added"; //message is sent as json
         }
     }
 }
