@@ -1,0 +1,59 @@
+
+<div class="container" style="padding-top: 300px">
+
+  <table class="table table-hover">
+    <tr>
+      <td>Id</td>
+      <td>
+        <input type="number" name="" id="" [(ngModel)]="item.productId">
+      </td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>
+        <input type="text" name="" id="" [(ngModel)]="item.productName">
+      </td>
+    </tr>
+    <tr>
+      <td>Price</td>
+      <td>
+        <input type="number" name="" id="" [(ngModel)]="item.price">
+      </td>
+    </tr>
+    <tr>
+      <td>Stock</td>
+      <td>
+        <input type="number" name="" id="" [(ngModel)]="item.stock">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)="Save()" class="btn">Add</button>
+        <button (click)="Search()" class="btn">Search</button>
+        <button (click)="Edit()" class="btn">Edit</button>
+        <button (click)="Delete()" class="btn">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of products">
+        <td>{{item.productId}}</td>
+        <td>{{item.productName}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.stock}}</td>
+        <td><button (click)="Remove(item.productId!)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
