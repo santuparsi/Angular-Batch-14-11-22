@@ -1,0 +1,9 @@
+1. Create new API Project
+2. Add EF packages
+3. Create a Entity Book(BookId,Name,ISBN,Price,Lang,Author,Publisher)
+4. Create a BookContract interface and declare curd methods
+5. Create a BookService class and implement BookContract
+6. Create a BookController and test the BookService methods using diff endpoints(actionmethods)
+7. Test BookController endpoints using swagger
+Note: Createa a Book table in the database using EF code first method.
+8. Connect Api with Angular App

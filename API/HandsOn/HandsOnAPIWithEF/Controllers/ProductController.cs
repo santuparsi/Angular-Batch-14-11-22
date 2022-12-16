@@ -16,11 +16,11 @@ namespace HandsOnAPIWithEF.Controllers
             this.productContract = productContract;
         }
         [HttpGet,Route("GetAllProducts")]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                List<Product> products = productContract.GetProducts();
+                List<Product> products = await productContract.GetProducts();
                 return StatusCode(200, products);
             }
             catch (Exception ex)

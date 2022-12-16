@@ -70,12 +70,15 @@ namespace HandsOnAPIWithEF.Services
             }
         }
 
-        public List<Product> GetProducts()
+        public async Task<List<Product>> GetProducts()
         {
             try
             {
 
-                return _context.Products.ToList();
+                return await Task.Run(() =>
+                {
+                    return _context.Products.ToList();
+                });
             }
             catch (Exception)
             {
