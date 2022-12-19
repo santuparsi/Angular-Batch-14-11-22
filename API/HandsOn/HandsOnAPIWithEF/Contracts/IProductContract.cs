@@ -4,7 +4,7 @@ namespace HandsOnAPIWithEF.Contracts
 {
     public interface IProductContract
     {
-        List<Product> GetProducts();
+        Task<List<Product>> GetProducts();
         Product GetProduct(int id);
         void AddProduct(Product product);
         void EditProduct(Product product);
