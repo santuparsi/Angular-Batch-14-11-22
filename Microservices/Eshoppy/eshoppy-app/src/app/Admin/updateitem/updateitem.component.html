@@ -1,0 +1,27 @@
+
+<div class="container">
+    <table class="table-boardered">
+        <tr>
+            <td><label>ITEM ID</label></td>
+            <td>
+                <input [(ngModel)]="item.itemId" type="text" readonly/>
+            </td>
+        </tr>
+        <tr>
+            <td><label>ITEM NAME</label></td>
+            <td> <input type="text" [(ngModel)]="item.itemName" readonly />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Price</label></td>
+            <td>
+                <input type="text" [(ngModel)]="item.price" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                    <button class="btn-primary" on-click='Edit()'>Edit</button> &nbsp;          
+            </td>
+        </tr>
+    </table>
+</div>

@@ -25,5 +25,18 @@ namespace EComm.ProductService.Repositories
                 throw;
             }
         }
+
+        public Product SearchProduct(string pname)
+        {
+            try
+            {
+                return productDB1219Context.Products.SingleOrDefault(p => p.Name == pname);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

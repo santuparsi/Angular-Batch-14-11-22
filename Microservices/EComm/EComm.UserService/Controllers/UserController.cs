@@ -17,7 +17,7 @@ namespace EComm.UserService.Controllers
         {
             this.userRepository = userRepository;
         }
-        [HttpPost,Route("AddUser")]
+        [HttpPost, Route("AddUser")]
         public IActionResult Register(User user)
         {
             try
@@ -36,14 +36,18 @@ namespace EComm.UserService.Controllers
         {
             try
             {
-                User user=userRepository.Validate(login);
+                User user = userRepository.Validate(login);
+              
                 return StatusCode(200, user);
             }
+
             catch (Exception ex)
             {
 
                 return StatusCode(500, ex.Message);
             }
         }
+
+       
     }
 }

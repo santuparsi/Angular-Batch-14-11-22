@@ -1,0 +1,63 @@
+<!-- main app container -->
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <table>
+        <tr>
+            <td><label>USER ID</label></td>
+            <td>
+                <input formControlName="userid" type="text" />
+
+                <div *ngIf="submitted && f.userid.errors">
+                    <div *ngIf="f.userid.errors.required">ID is required</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Name</label></td>
+            <td> <input type="text" formControlName="fname" />
+                <div *ngIf="submitted && f.fname.errors">
+                    <div *ngIf="f.fname.errors.required">Name is required</div>
+                    <div *ngIf="f.fname.errors.pattern">Enter only Alphabets</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td>
+                <input type="text" formControlName="email" />
+                <div *ngIf="submitted && f.email.errors">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> <label>Mobile</label></td>
+            <td>
+                <input type="text" formControlName="mobile" />
+                <div *ngIf="submitted && f.mobile.errors">
+                    <div *ngIf="f.mobile.errors.required">Mobile no is required</div>
+                    <div *ngIf="f.mobile.errors.pattern">Mobile no Must be Valid</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td> <input type="password" formControlName="password" />
+                <div *ngIf="submitted && f.password.errors">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div>
+                    <button type="submit">Register</button>
+                    <button type="reset" (click)="onReset()">Cancel</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+</form>

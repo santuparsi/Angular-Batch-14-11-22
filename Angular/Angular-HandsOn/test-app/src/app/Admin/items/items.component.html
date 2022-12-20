@@ -1,0 +1,22 @@
+<div class="container">
+   <a [routerLink]="[ '/add-item']">Add New</a>
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of items">
+            <tr>
+                <td>{{item.itemId}}</td>
+                <td>{{item.itemName}}</td>
+                <td>{{item.price}}</td>
+                <td><button class="btn-primary" on-click='GetItem(item.itemId)'>Edit</button></td>
+                <td><button class="btn-primary" on-click='DeleteItem(item.itemId)'>Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

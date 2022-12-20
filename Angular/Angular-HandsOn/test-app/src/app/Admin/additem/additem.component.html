@@ -1,0 +1,44 @@
+<div class="container">
+    <!-- main app container -->
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+    <table class="table-boardered">
+        <tr>
+            <td><label>ITEM ID</label></td>
+            <td>
+                <input formControlName="itemid" type="text"/>
+
+                <div *ngIf="submitted && f.itemid.errors">
+                    <div *ngIf="f.itemid.errors.required">ID is required</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>ITEM NAME</label></td>
+            <td> <input type="text" formControlName="itemname" />
+                <div *ngIf="submitted && f.itemname.errors">
+                    <div *ngIf="f.itemname.errors.required">Name is required</div>
+                    <div *ngIf="f.itemname.errors.pattern">Enter only Alphabets</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Price</label></td>
+            <td>
+                <input type="text" formControlName="price"  />
+                <div *ngIf="submitted && f.price.errors">
+                    <div *ngIf="f.price.errors.required">Price is required</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+               
+                    <button type="submit" class="btn-primary">Add</button> &nbsp;
+                    <button type="reset" (click)="onReset()" class="btn-info">Cancel</button>
+              
+            </td>
+        </tr>
+    </table>
+
+</form>
+</div>

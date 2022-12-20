@@ -1,0 +1,52 @@
+{
+	"Routes": [
+		{
+			"DownstreamPathTemplate": "/api/User",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 54478
+				}
+			],
+			"UpstreamPathTemplate": "/EComm/User",
+			"UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+		},
+		{
+			"DownstreamPathTemplate": "/api/User/{catchall}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 54478
+				}
+			],
+			"UpstreamPathTemplate": "/EComm/User/{catchall}",
+			"UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+		},
+		{
+			"DownstreamPathTemplate": "/api/Product",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 46596
+				}
+			],
+			"UpstreamPathTemplate": "/EComm/Product",
+			"UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+		},
+		{
+			"DownstreamPathTemplate": "/api/Product/{catchall}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 46596
+				}
+			],
+			"UpstreamPathTemplate": "/EComm/Product/{catchall}",
+			"UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+		}
+	]
+}

@@ -29,5 +29,19 @@ namespace EComm.ProductService.Controllers
                 return StatusCode(200, ex.Message);
             }
         }
+        [HttpGet,Route("Search/{pname}")]
+        public IActionResult Get(string pname)
+        {
+            try
+            {
+                Product product = productContract.SearchProduct(pname);
+                return StatusCode(200, product);
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(200, ex.Message);
+            }
+        }
     }
 }

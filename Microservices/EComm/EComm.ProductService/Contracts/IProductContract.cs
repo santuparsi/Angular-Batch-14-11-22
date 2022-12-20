@@ -5,5 +5,6 @@ namespace EComm.ProductService.Contracts
     public interface IProductContract
     {
         void AddProduct(Product product);
+        Product SearchProduct(string pname);
     }
 }

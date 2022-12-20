@@ -1,0 +1,29 @@
+<div class="container">
+    <table>
+        <tr>
+            <td>Search Product</td>
+            <td><input type="text" [(ngModel)]="itemName" class="form-control"></td>
+            <td><button class="btn btn-primary" on-click='SearchItem()'>Search</button></td>
+        </tr>
+    </table>
+    <br>
+  <table class="table table-bordered" *ngIf="visible">
+      <tr>
+          <td>ID</td>
+          <td>{{item.itemId}}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{item.itemName}}</td>
+    </tr>
+    <tr>
+        <td>Price</td>
+        <td>{{item.price}}</td>
+    </tr>
+    <tr>
+        <td class="2" align="center">
+            <button style="background-color: brown; width: 200px; color: white;" on-click="Purchase()">Buy</button>
+        </td>
+    </tr>
+  </table>
+</div>
